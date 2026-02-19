@@ -92,7 +92,19 @@ function Navbar() {
             }
           >
             Proyectos
-          </NavLink>
+              </NavLink>
+          <NavLink
+            to="/visual-concepts"
+            onClick={closeMenu}
+            className={({ isActive }) =>
+              isActive
+                ? 'text-[#0d9488] font-semibold'
+                : 'hover:text-[#0d9488]'
+            }
+          >        
+            Concepto Visual
+          </NavLink>            
+          
           <NavLink
             to="/contact"
             onClick={closeMenu}
@@ -148,6 +160,19 @@ function Navbar() {
             Proyectos
           </NavLink>
           <NavLink
+            to="/visual-concepts"
+            onClick={closeMenu}
+            className={({ isActive }) =>
+              isActive
+                ? 'text-[#0d9488] font-semibold'
+                : 'hover:text-[#0d9488]'
+            }
+
+            
+          > 
+              Concepto Visual
+          </NavLink>
+          <NavLink
             to="/contact"
             onClick={closeMenu}
             className={({ isActive }) =>
@@ -155,9 +180,10 @@ function Navbar() {
                 ? 'text-[#0d9488] font-semibold'
                 : 'hover:text-[#0d9488]'
             }
-          >   
+          >        
             Contacto
-          </NavLink>
+          </NavLink>                      
+          
         </div>
       )}
     </nav>
