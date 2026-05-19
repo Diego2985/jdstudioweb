@@ -92,7 +92,18 @@ function Navbar() {
             }
           >
             Proyectos
-              </NavLink>
+          </NavLink>
+          <NavLink
+            to="/tarjetas-virtuales"
+            onClick={closeMenu}
+            className={({ isActive }) =>
+              isActive
+                ? 'text-[#0d9488] font-semibold'
+                : 'hover:text-[#0d9488]'
+            }
+          >
+            Tarjetas Virtuales
+          </NavLink>
           <NavLink
             to="/visual-concepts"
             onClick={closeMenu}
@@ -158,6 +169,17 @@ function Navbar() {
             }
           >
             Proyectos
+          </NavLink>
+          <NavLink
+            to="/tarjetas-virtuales"
+            onClick={closeMenu}
+            className={({ isActive }) =>
+              isActive
+                ? 'text-[#0d9488] font-semibold'
+                : 'hover:text-[#0d9488]'
+            }
+          >
+            Tarjetas Virtuales
           </NavLink>
           <NavLink
             to="/visual-concepts"

@@ -3,59 +3,65 @@ import React, { useMemo, useState, useEffect, useCallback } from "react";
 
 export default function VisualConcepts() {
   const concepts = useMemo(
-    () => [
-      {
-        id: "corp-dark",
-        title: "Corporate — Dark Premium",
-        tag: "UI / Branding",
-        desc: "Estilo corporativo moderno, oscuro, CTA fuerte y tipografía limpia.",
-        shots: [
-          { label: "Home", src: "/concepts/corporate/home.jpg" },
-          { label: "Nosotros", src: "/concepts/corporate/about.jpg" },
-          { label: "Servicios", src: "/concepts/corporate/services.jpg" },
-          { label: "Contacto", src: "/concepts/corporate/contact.jpg" },
-        ],
-      },
-      {
-        id: "tourism-light",
-        title: "Tourism — Light Premium",
-        tag: "Landing / Travel",
-        desc: "Look premium claro para turismo, enfoque en conversión y claridad.",
-        shots: [
-          { label: "Home", src: "/concepts/tourism/home.jpg" },
-          { label: "Nosotros", src: "/concepts/tourism/about.jpg" },
-          { label: "Servicios", src: "/concepts/tourism/services.jpg" },
-          { label: "Contacto", src: "/concepts/tourism/contact.jpg" },
-        ],
-      },
-      {
-        id: "restaurant-color",
-        title: "Restaurant — Color Premium",
-        tag: "Food / Conversion",
-        desc: "Estética moderna con color, foco en CTA y experiencia visual.",
-        shots: [
-          { label: "Home", src: "/concepts/restaurant/home.jpg" },
-          { label: "Nosotros", src: "/concepts/restaurant/about.jpg" },
-          { label: "Servicios", src: "/concepts/restaurant/services.jpg" },
-          { label: "Contacto", src: "/concepts/restaurant/contact.jpg" },
-        ],
-      },
-      {
-        id: "medical-clean",
-        title: "Medical — Clean Premium",
-        tag: "Health / Trust",
-        desc: "Diseño limpio y confiable para medicina, jerarquía clara.",
-        shots: [
-          { label: "Home", src: "/concepts/medical/home.jpg" },
-          { label: "Nosotros", src: "/concepts/medical/about.jpg" },
-          { label: "Servicios", src: "/concepts/medical/services.jpg" },
-          { label: "Contacto", src: "/concepts/medical/contact.jpg" },
-        ],
-      },
-    ],
-    []
-  );
+  () => [
+    {
+      id: "corp-dark",
+      title: "Corporate — Dark Premium",
+      tag: "UI / Branding",
+      desc: "Estilo corporativo moderno, oscuro, CTA fuerte y tipografía limpia.",
+      demo: "/demos/corporate",
+      shots: [
+        { label: "Home", src: "/concepts/corporate/home.jpg" },
+        { label: "Nosotros", src: "/concepts/corporate/about.jpg" },
+        { label: "Servicios", src: "/concepts/corporate/services.jpg" },
+        { label: "Contacto", src: "/concepts/corporate/contact.jpg" },
+      ],
+    },
 
+    {
+      id: "tourism-light",
+      title: "Tourism — Light Premium",
+      tag: "Landing / Travel",
+      desc: "Look premium claro para turismo, enfoque en conversión y claridad.",
+      demo: "/demos/tourism",
+      shots: [
+        { label: "Home", src: "/concepts/tourism/home.jpg" },
+        { label: "Nosotros", src: "/concepts/tourism/about.jpg" },
+        { label: "Servicios", src: "/concepts/tourism/services.jpg" },
+        { label: "Contacto", src: "/concepts/tourism/contact.jpg" },
+      ],
+    },
+
+    {
+      id: "restaurant-color",
+      title: "Restaurant — Color Premium",
+      tag: "Food / Conversion",
+      desc: "Estética moderna con color, foco en CTA y experiencia visual.",
+      demo: "/demos/restaurant",
+      shots: [
+        { label: "Home", src: "/concepts/restaurant/home.jpg" },
+        { label: "Nosotros", src: "/concepts/restaurant/about.jpg" },
+        { label: "Servicios", src: "/concepts/restaurant/services.jpg" },
+        { label: "Contacto", src: "/concepts/restaurant/contact.jpg" },
+      ],
+    },
+
+    {
+      id: "medical-clean",
+      title: "Medical — Clean Premium",
+      tag: "Health / Trust",
+      desc: "Diseño limpio y confiable para medicina, jerarquía clara.",
+      demo: "/demos/medical",
+      shots: [
+        { label: "Home", src: "/concepts/medical/home.jpg" },
+        { label: "Nosotros", src: "/concepts/medical/about.jpg" },
+        { label: "Servicios", src: "/concepts/medical/services.jpg" },
+        { label: "Contacto", src: "/concepts/medical/contact.jpg" },
+      ],
+    },
+  ],
+  []
+);
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(null); // { concept, index }
 
@@ -113,7 +119,7 @@ export default function VisualConcepts() {
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
           <div className="max-w-2xl">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              Visual Concepts
+              Conceptos Visuales
             </h2>
             <p className="mt-3 text-gray-300 leading-relaxed">
               Exploraciones visuales para definir estilo, nivel estético y dirección
@@ -176,6 +182,26 @@ export default function VisualConcepts() {
                   <p className="mt-2 text-sm text-white/70 leading-relaxed">
                     {c.desc}
                   </p>
+
+                  {/* BOTON DEMO */}
+                      <div className="mt-4 flex items-center justify-between">
+
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation()
+                            window.open(c.demo, "_blank")
+                          }}
+                          className="px-4 py-2 text-sm rounded-lg bg-gradient-to-r from-indigo-500 to-purple-600 hover:opacity-90 transition"
+                        >
+                          Preview Demo
+                        </button>
+
+                        <span className="text-xs text-white/50">
+                          Sitio interactivo
+                        </span>
+
+                      </div>
+
 
                   <div className="mt-4 flex flex-wrap gap-2">
                     {c.shots.slice(0, 4).map((s) => (
