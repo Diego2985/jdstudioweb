@@ -197,10 +197,10 @@ export function VirtualCardPreviewModal({ selectedCard, isOpen, onClose }) {
     : "from-slate-500/15 to-slate-900/10";
 
   return (
-    <div className={`fixed inset-0 z-50 flex items-center justify-center px-4 py-6 ${mounted ? "opacity-100" : "opacity-0"}`}>
+    <div className={`fixed inset-0 z-50 flex items-start justify-center overflow-y-auto touch-pan-y px-4 py-6 ${mounted ? "opacity-100" : "opacity-0"}`}>
       <div className="absolute inset-0 bg-black/80 backdrop-blur-2xl transition-opacity duration-300" onClick={close} />
 
-      <div className={`relative z-10 w-full max-w-6xl overflow-hidden rounded-[40px] border border-white/10 bg-[#060710]/95 shadow-[0_45px_120px_rgba(0,0,0,0.75)] backdrop-blur-3xl transition-all duration-300 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-[0.96]"}`}>
+      <div className={`relative z-10 w-full max-w-6xl max-h-[calc(100vh-4rem)] overflow-y-auto rounded-[40px] border border-white/10 bg-[#060710]/95 shadow-[0_45px_120px_rgba(0,0,0,0.75)] backdrop-blur-3xl transition-all duration-300 ${mounted ? "opacity-100 scale-100" : "opacity-0 scale-[0.96]"}`}>
         <button
           onClick={close}
           aria-label="Cerrar vista previa"
@@ -216,7 +216,10 @@ export function VirtualCardPreviewModal({ selectedCard, isOpen, onClose }) {
               <div className="absolute left-8 top-4 h-3 w-3 rounded-full bg-slate-200/30" />
               <div className="absolute right-8 top-4 h-3 w-3 rounded-full bg-emerald-400/75 shadow-[0_0_16px_rgba(16,185,129,0.35)]" />
               <div className="mt-12 overflow-hidden rounded-[48px] border border-white/5 bg-[#07101e]/95 p-4 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.06)]">
-                <div className="h-[520px] overflow-hidden rounded-[36px] bg-gradient-to-b from-slate-950 via-slate-950/90 to-slate-900 p-4">
+                <div
+                  className="max-h-[calc(100vh-18rem)] min-h-[420px] overflow-y-auto touch-pan-y rounded-[36px] bg-gradient-to-b from-slate-950 via-slate-950/90 to-slate-900 p-4"
+                  style={{ WebkitOverflowScrolling: "touch" }}
+                >
                   <div className="mx-auto mt-4 w-max rounded-[32px] border border-white/10 bg-white/5 p-2 shadow-[0_20px_60px_rgba(0,0,0,0.3)] backdrop-blur-xl">
                     <VirtualCardPreview card={selectedCard} />
                   </div>
