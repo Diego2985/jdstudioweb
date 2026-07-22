@@ -2,7 +2,7 @@
   {
     "title": "FarmaDesign",
     "description": "Sitio informativo para farmacias, hecho con React, Tailwind y Bootstrap.",
-    "github": "https://github.com/tuusuario/farmadesign",
+    "github": "https://github.com/Diego2985/farmadesign",
     "vercel": "https://farmadesign.vercel.app/",
     "image": "/images/imagen.jpg",
     "tech": ["React", "Tailwind", "Bootstrap"]
@@ -10,7 +10,7 @@
   {
     "title": "Fullstack Ecommerce",
     "description": "Ecommerce en desarrollo con React y CSS.",
-    "github": "https://github.com/tuusuario/fullstack-ecommerce",
+    "github": "https://github.com/Diego2985/fullstack-ecommerce",
     "vercel": "https://fullstack-ecommerce-zeta.vercel.app/",
     "image": "/images/imagen1.jpg",
     "tech": ["React", "Node.js", "Express"]
@@ -18,7 +18,7 @@
   {
     "title": "Ecommerce JavaScript",
     "description": "Sitio funcional hecho en React y CSS vanilla.",
-    "github": "https://github.com/tuusuario/ecommerce-javascript",
+    "github": "https://github.com/Diego2985/ecommerce-javascript",
     "vercel": "https://ecommerce-javascript-delta.vercel.app/",
     "image": "/images/imagen2.jpg",
     "tech": ["React", "JavaScript", "CSS"]
@@ -26,7 +26,7 @@
   {
     "title": "Calculadora React",
     "description": "Calculadora hecha con componentes reutilizables.",
-    "github": "https://github.com/tuusuario/calculadora-react",
+    "github": "https://github.com/Diego2985/calculadora-react",
     "vercel": "https://proyecto-calculadora-sooty.vercel.app/",
     "image": "/images/imagen3.png",
     "tech": ["React", "CSS"]
@@ -34,9 +34,17 @@
   {
     "title": "Mini Blog",
     "description": "Mini blog con GraphQL, Apollo Client y Tailwind.",
-    "github": "https://github.com/tuusuario/mini-blog",
+    "github": "https://github.com/Diego2985/mini-blog",
     "vercel": "https://mini-blog.vercel.app/",
     "image": "/images/miniblog.png",
     "tech": ["React", "GraphQL", "Apollo", "Tailwind"]
+  },
+  {
+    "title": "Business Premium",
+    "description": "Landing page corporativa moderna desarrollada con React, Tailwind CSS y Framer Motion.",
+    "github": "https://github.com/Diego2985/Business-Premium",
+    "vercel": "https://business-premium.vercel.app/",
+    "image": "/images/imagen4.png",
+    "tech": ["React", "Tailwind", "Framer Motion"]
   }
 ]
