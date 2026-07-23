@@ -46,5 +46,19 @@
     "vercel": "https://business-premium.vercel.app/",
     "image": "/images/imagen4.png",
     "tech": ["React", "Tailwind", "Framer Motion"]
-  }
+  },
+  {
+  "title": "Explore Argentina",
+  "description": "Sitio web corporativo premium para una empresa de turismo, con diseño moderno, animaciones fluidas, múltiples páginas y una experiencia totalmente responsive.",
+  "github": "https://github.com/Diego2985/explore-argentina",
+  "vercel": "https://explore-argentina.vercel.app/",
+  "image": "/images/imagen5.png",
+  "tech": [
+    "React",
+    "Vite",
+    "Tailwind CSS",
+    "Framer Motion",
+    "React Router",
+    "JavaScript"
+  ]
 ]
