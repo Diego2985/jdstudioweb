@@ -1,0 +1,404 @@
+/* =========================================================
+   JD STUDIO WEB
+   NAVBAR
+   ========================================================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  height: 82px;
+
+  background: rgba(10, 20, 32, 0.94);
+
+  border-bottom: 1px solid rgba(13, 148, 136, 0.10);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  transition:
+    background 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+
+.navbar-container {
+  max-width: 1400px;
+  height: 100%;
+
+  margin: 0 auto;
+  padding: 0 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 35px;
+}
+
+/* =========================================================
+   MARCA
+   ========================================================= */
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  text-decoration: none;
+
+  flex-shrink: 0;
+}
+
+.navbar-logo {
+  width: 58px;
+  height: 68px;
+
+  object-fit: contain;
+}
+
+.navbar-brand-text {
+  display: flex;
+  flex-direction: column;
+
+  line-height: 1;
+}
+
+.navbar-brand-text span {
+  color: #0d9488;
+
+  font-size: 1.55rem;
+  font-weight: 700;
+
+  letter-spacing: 0.02em;
+}
+
+.navbar-brand-text small {
+  margin-top: 5px;
+
+  color: #f1f5f9;
+
+  font-size: 0.65rem;
+  font-weight: 500;
+
+  letter-spacing: 0.06em;
+}
+
+/* =========================================================
+   MENÚ
+   ========================================================= */
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+
+  gap: 28px;
+
+  margin-left: auto;
+}
+
+.navbar-link {
+  position: relative;
+
+  padding: 30px 0;
+
+  color: #d7dee7;
+
+  font-size: 0.91rem;
+  font-weight: 500;
+
+  text-decoration: none;
+
+  white-space: nowrap;
+
+  transition:
+    color 0.25s ease;
+}
+
+.navbar-link::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 20px;
+
+  width: 0;
+  height: 2px;
+
+  background: #0d9488;
+
+  transition: width 0.25s ease;
+}
+
+.navbar-link:hover {
+  color: #ffffff;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+.navbar-link.active {
+  color: #0d9488;
+}
+
+.navbar-link.active::after {
+  width: 100%;
+}
+
+/* =========================================================
+   CTA
+   ========================================================= */
+
+.navbar-cta {
+  min-width: 128px;
+  height: 48px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 9px;
+
+  padding: 0 20px;
+
+  border-radius: 8px;
+
+  color: white;
+
+  background: #0d9488;
+
+  font-size: 0.9rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  box-shadow:
+    0 8px 25px rgba(13, 148, 136, 0.15);
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.navbar-cta:hover {
+  color: white;
+
+  background: #0faaa0;
+
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 12px 30px rgba(13, 148, 136, 0.25);
+}
+
+.navbar-cta-icon {
+  font-size: 1.1rem;
+}
+
+/* =========================================================
+   HAMBURGUESA
+   ========================================================= */
+
+.navbar-toggle {
+  display: none;
+
+  width: 42px;
+  height: 42px;
+
+  padding: 8px;
+
+  border: 1px solid rgba(13, 148, 136, 0.35);
+  border-radius: 7px;
+
+  background: transparent;
+
+  cursor: pointer;
+}
+
+.navbar-toggle span {
+  display: block;
+
+  width: 100%;
+  height: 2px;
+
+  margin: 5px 0;
+
+  background: #e2e8f0;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+.navbar-toggle.open span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.navbar-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.open span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* =========================================================
+   MENÚ MOBILE
+   ========================================================= */
+
+.navbar-mobile {
+  display: none;
+
+  padding: 18px 25px 25px;
+
+  background: rgba(8, 13, 20, 0.98);
+
+  border-top: 1px solid rgba(13, 148, 136, 0.08);
+
+  box-shadow:
+    0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-mobile-link {
+  display: block;
+
+  padding: 13px 5px;
+
+  color: #d7dee7;
+
+  font-size: 0.95rem;
+
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(148, 163, 184, 0.08);
+
+  transition:
+    color 0.25s ease,
+    padding-left 0.25s ease;
+}
+
+.navbar-mobile-link:hover {
+  padding-left: 10px;
+  color: #0d9488;
+}
+
+.navbar-mobile-link.active {
+  color: #0d9488;
+  font-weight: 600;
+}
+
+.navbar-mobile-cta {
+  display: block;
+
+  margin-top: 18px;
+
+  padding: 13px;
+
+  border-radius: 7px;
+
+  color: white;
+
+  background: #0d9488;
+
+  text-align: center;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1150px) {
+
+  .navbar-container {
+    padding: 0 30px;
+    gap: 20px;
+  }
+
+  .navbar-menu {
+    gap: 18px;
+  }
+
+  .navbar-link {
+    font-size: 0.82rem;
+  }
+
+  .navbar-cta {
+    min-width: 110px;
+    padding: 0 15px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+  .navbar {
+    height: 76px;
+  }
+
+  .navbar-container {
+    padding: 0 20px;
+  }
+
+  .navbar-logo {
+    width: 50px;
+    height: 62px;
+  }
+
+  .navbar-brand-text span {
+    font-size: 1.35rem;
+  }
+
+  .navbar-brand-text small {
+    font-size: 0.58rem;
+  }
+
+  .navbar-menu,
+  .navbar-cta {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-mobile {
+    display: block;
+
+    max-height: 0;
+    overflow: hidden;
+
+    padding-top: 0;
+    padding-bottom: 0;
+
+    opacity: 0;
+
+    transition:
+      max-height 0.35s ease,
+      opacity 0.25s ease,
+      padding 0.35s ease;
+  }
+
+  .navbar-mobile.show {
+    max-height: 500px;
+
+    padding-top: 18px;
+    padding-bottom: 25px;
+
+    opacity: 1;
+  }
+}

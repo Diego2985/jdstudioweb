@@ -4,7 +4,7 @@
     "description": "Sitio informativo para farmacias, hecho con React, Tailwind y Bootstrap.",
     "github": "https://github.com/Diego2985/farmadesign",
     "vercel": "https://farmadesign.vercel.app/",
-    "image": "/images/imagen.jpg",
+    "image": "/images/imagen.png",
     "tech": ["React", "Tailwind", "Bootstrap"]
   },
   {
@@ -12,7 +12,7 @@
     "description": "Ecommerce en desarrollo con React y CSS.",
     "github": "https://github.com/Diego2985/fullstack-ecommerce",
     "vercel": "https://fullstack-ecommerce-zeta.vercel.app/",
-    "image": "/images/imagen1.jpg",
+    "image": "/images/imagen1.png",
     "tech": ["React", "Node.js", "Express"]
   },
   {
@@ -20,7 +20,7 @@
     "description": "Sitio funcional hecho en React y CSS vanilla.",
     "github": "https://github.com/Diego2985/ecommerce-javascript",
     "vercel": "https://ecommerce-javascript-delta.vercel.app/",
-    "image": "/images/imagen2.jpg",
+    "image": "/images/imagen2.png",
     "tech": ["React", "JavaScript", "CSS"]
   },
   {

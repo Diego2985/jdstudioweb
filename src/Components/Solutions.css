@@ -1,0 +1,372 @@
+/* =========================================================
+   JD STUDIO WEB
+   SOLUTIONS
+   ========================================================= */
+
+.solutions {
+  position: relative;
+
+  padding: 120px 40px;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      180deg,
+      #080d14 0%,
+      #0b111b 100%
+    );
+}
+
+/* Línea superior muy sutil */
+
+.solutions::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 50%;
+
+  width: 80%;
+  height: 1px;
+
+  transform: translateX(-50%);
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(13, 148, 136, 0.35),
+      transparent
+    );
+}
+
+/* =========================================================
+   CONTENEDOR
+   ========================================================= */
+
+.solutions-container {
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.solutions-header {
+  max-width: 700px;
+
+  margin-bottom: 60px;
+}
+
+.solutions-eyebrow {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: #0d9488;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.32em;
+}
+
+.solutions-title {
+  margin: 0;
+
+  color: #f8fafc;
+
+  font-size: clamp(2.4rem, 4vw, 3.6rem);
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  letter-spacing: -0.035em;
+}
+
+.solutions-title span {
+  color: #0d9488;
+}
+
+.solutions-intro {
+  max-width: 620px;
+
+  margin: 22px 0 0;
+
+  color: #9ba8b5;
+
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   GRID
+   ========================================================= */
+
+.solutions-grid {
+  display: grid;
+
+  grid-template-columns:
+    1.15fr
+    1fr
+    1fr;
+
+  gap: 20px;
+}
+
+/* =========================================================
+   CARD
+   ========================================================= */
+
+.solution-card {
+  position: relative;
+
+  min-height: 390px;
+
+  padding: 32px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(148, 163, 184, 0.13);
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.045),
+      rgba(255,255,255,0.015)
+    );
+
+  box-shadow:
+    0 20px 50px rgba(0, 0, 0, 0.18);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.solution-card:hover {
+  transform: translateY(-7px);
+
+  border-color:
+    rgba(13, 148, 136, 0.45);
+
+  box-shadow:
+    0 30px 65px rgba(0, 0, 0, 0.28),
+    0 0 30px rgba(13, 148, 136, 0.06);
+}
+
+/* =========================================================
+   CARD DESTACADA
+   ========================================================= */
+
+.solution-card-featured {
+  border-color:
+    rgba(13, 148, 136, 0.30);
+
+  background:
+    radial-gradient(
+      circle at 85% 15%,
+      rgba(13, 148, 136, 0.13),
+      transparent 30%
+    ),
+    linear-gradient(
+      145deg,
+      rgba(13, 148, 136, 0.07),
+      rgba(255,255,255,0.018)
+    );
+}
+
+/* =========================================================
+   PARTE SUPERIOR
+   ========================================================= */
+
+.solution-card-top {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+}
+
+.solution-number {
+  color: #526171;
+
+  font-size: 0.72rem;
+  font-weight: 600;
+
+  letter-spacing: 0.15em;
+}
+
+.solution-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid rgba(13, 148, 136, 0.25);
+
+  border-radius: 12px;
+
+  color: #0d9488;
+
+  background:
+    rgba(13, 148, 136, 0.07);
+
+  font-size: 1rem;
+  font-weight: 600;
+
+  box-shadow:
+    inset 0 0 20px rgba(13, 148, 136, 0.03);
+}
+
+/* =========================================================
+   CONTENIDO
+   ========================================================= */
+
+.solution-card-content {
+  margin-top: auto;
+}
+
+.solution-card h3 {
+  margin: 0 0 15px;
+
+  color: #f8fafc;
+
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.solution-card p {
+  max-width: 390px;
+
+  margin: 0 0 22px;
+
+  color: #9ca9b7;
+
+  font-size: 0.94rem;
+  line-height: 1.65;
+}
+
+.solution-technologies {
+  display: inline-block;
+
+  color: #0d9488;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  letter-spacing: 0.04em;
+}
+
+/* =========================================================
+   LINK
+   ========================================================= */
+
+.solution-link {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  width: fit-content;
+
+  margin-top: 28px;
+
+  color: #e2e8f0;
+
+  font-size: 0.86rem;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    gap 0.25s ease;
+}
+
+.solution-link span {
+  color: #0d9488;
+
+  font-size: 1.1rem;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.solution-link:hover {
+  color: #ffffff;
+
+  gap: 13px;
+}
+
+.solution-link:hover span {
+  transform: translateX(3px);
+}
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .solutions {
+    padding: 100px 30px;
+  }
+
+  .solutions-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .solution-card-featured {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 650px) {
+
+  .solutions {
+    padding: 80px 20px;
+  }
+
+  .solutions-header {
+    margin-bottom: 40px;
+  }
+
+  .solutions-title {
+    font-size: 2.5rem;
+  }
+
+  .solutions-intro {
+    font-size: 0.95rem;
+  }
+
+  .solutions-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .solution-card-featured {
+    grid-column: auto;
+  }
+
+  .solution-card {
+    min-height: 350px;
+
+    padding: 26px;
+  }
+
+}
