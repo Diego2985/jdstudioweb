@@ -7,14 +7,7 @@
     "image": "/images/imagen.png",
     "tech": ["React", "Tailwind", "Bootstrap"]
   },
-  {
-    "title": "Fullstack Ecommerce",
-    "description": "Ecommerce en desarrollo con React y CSS.",
-    "github": "https://github.com/Diego2985/fullstack-ecommerce",
-    "vercel": "https://fullstack-ecommerce-zeta.vercel.app/",
-    "image": "/images/imagen1.png",
-    "tech": ["React", "Node.js", "Express"]
-  },
+  
   {
     "title": "Ecommerce JavaScript",
     "description": "Sitio funcional hecho en React y CSS vanilla.",
